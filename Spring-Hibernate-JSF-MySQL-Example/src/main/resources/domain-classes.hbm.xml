@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class table="Person" lazy="false" name="com.hibernate.data.Person" >
+		<id column="PERSON_ID" type="int" name="id" >
+			<generator class="increment"/>
+		</id>
+			<property name="firstName" column="PERSON_FIRSTNAME" type="string" />
+			<property name="lastName" column="PERSON_LASTNAME" type="string" />
+			<property name="gender" column="PERSON_GENDER" type="string" />
+			<property name="age" column="PERSON_AGE" type="int"  />
+	</class>
+</hibernate-mapping>
