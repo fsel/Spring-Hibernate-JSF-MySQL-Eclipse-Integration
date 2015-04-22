@@ -11,8 +11,7 @@
 	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/PERSONDB</property>
 	<property name="hibernate.connection.username">fulden</property>
     <property name="hibernate.connection.password">secret_pass</property>
-    
-	<!-- SQL dialect -->
+    <!-- SQL dialect -->
 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 	<!-- Specify session context -->
 	<property name="hibernate.current_session_context_class">thread</property>

@@ -7,7 +7,7 @@
 	<!-- Enable Spring Annotation Configuration -->
     <context:annotation-config />
     <!-- Scan for all of Spring components such as Spring Service -->
-    <context:component-scan base-package="com.spring.service"></context:component-scan>
+    <context:component-scan base-package="com.*"></context:component-scan>
 	<!-- Create Data Source bean -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">
@@ -20,11 +20,6 @@
     <bean id="sessionFactory"
         class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mappingResources">
-            <list>
-                <value>domain-classes.hbm.xml</value>
-            </list>
-        </property>
         <property name="configLocation">
             <value>classpath:hibernate.cfg.xml</value>
         </property>

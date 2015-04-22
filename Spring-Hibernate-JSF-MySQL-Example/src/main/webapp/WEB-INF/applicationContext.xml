@@ -18,13 +18,8 @@
     </bean>
     <!-- Define SessionFactory bean -->
     <bean id="sessionFactory"
-        class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mappingResources">
-            <list>
-                <value>domain-classes.hbm.xml</value>
-            </list>
-        </property>
         <property name="configLocation">
             <value>classpath:hibernate.cfg.xml</value>
         </property>
