@@ -1,22 +1,19 @@
 package com.hibernate.data;
 
-
 public class Person {
 	
 	private int id;
-	
 	private String firstName;
-	
 	private String lastName;
-	
 	private String gender;
-	
 	private int age;
-	
 	public Person(){
-		
+		id = 1;
+		firstName = "";
+		lastName = "";
+		gender = "";
+		age = 1;
 	}
-	
 	public int getId() {
 		return id;
 	}
