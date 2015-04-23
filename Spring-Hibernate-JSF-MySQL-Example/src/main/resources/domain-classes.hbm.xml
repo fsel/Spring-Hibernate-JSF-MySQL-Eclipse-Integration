@@ -4,13 +4,13 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class table="Person" lazy="false" name="com.hibernate.data.Person" >
-		<id column="PERSON_ID" type="int" name="id" >
-			<generator class="increment"/>
+	<class table="Person" lazy="false" name="com.hibernate.data.Person">
+		<id column="PERSON_ID" type="int" name="id">
+			<generator class="increment" />
 		</id>
-			<property name="firstName" column="PERSON_FIRSTNAME" type="string" />
-			<property name="lastName" column="PERSON_LASTNAME" type="string" />
-			<property name="gender" column="PERSON_GENDER" type="string" />
-			<property name="age" column="PERSON_AGE" type="int"  />
+		<property name="firstName" column="PERSON_FIRSTNAME" type="string" />
+		<property name="lastName" column="PERSON_LASTNAME" type="string" />
+		<property name="gender" column="PERSON_GENDER" type="string" />
+		<property name="age" column="PERSON_AGE" type="int" />
 	</class>
 </hibernate-mapping>
