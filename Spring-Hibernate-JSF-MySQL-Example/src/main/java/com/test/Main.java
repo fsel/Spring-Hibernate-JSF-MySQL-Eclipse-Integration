@@ -19,22 +19,29 @@ public class Main {
         SessionFactory factory = configuration.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
         
         Session session = factory.openSession();
-        
         Transaction tx = session.getTransaction();
-        tx.begin();
-        System.out.println("Transaction began");//just to test
         
-        Person newPerson = new Person();
-        newPerson.setFirstName("aa");
-        newPerson.setLastName("bbb");
-        newPerson.setGender("Male");
-        newPerson.setAge(2);
-        
-        session.save(newPerson);
-        session.flush();
-        
-        tx.commit();
-        session.close();
+        try{
+        	tx.begin();
+            System.out.println("Transaction began");//just to test
+            
+            Person newPerson = new Person();
+            newPerson.setFirstName("aa");
+            newPerson.setLastName("bbb");
+            newPerson.setGender("Male");
+            newPerson.setAge(2);
+            
+            session.save(newPerson);
+            session.flush();
+            
+            tx.commit();
+        }
+        catch(Exception e){
+        	if (tx!=null) tx.rollback();
+        	   e.printStackTrace(); 
+        }finally{
+        	session.close();
+        }
         System.out.println("Session closed");//just to test
     
 	}
