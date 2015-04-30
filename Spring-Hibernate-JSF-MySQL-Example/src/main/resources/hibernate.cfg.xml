@@ -9,8 +9,8 @@
 		<!-- Database connection settings -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/PERSONDB</property>
-		<property name="hibernate.connection.username">fulden</property>
-		<property name="hibernate.connection.password">secret_pass</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">secret_root_password</property>
 		<!-- SQL dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<!-- Show SQL -->
